@@ -8,14 +8,12 @@ public class ComplexNumber {
 		
 		real = 0;
 		imaginary = 0;
-		
 	}
 	
 	public ComplexNumber(double r, double i) {
 		
 		real = r;
 		imaginary = i;
-		
 	}
 	
 	void addTo (ComplexNumber c) {
@@ -23,15 +21,13 @@ public class ComplexNumber {
 		real += c.real;
 		
 		imaginary += c.imaginary;
-    
 	}
 	
 	void subFrom (ComplexNumber c) {
 		
 		real -= c.real;
 		
-		imaginary -= c.imaginary;
-		
+		imaginary -= c.imaginary;	
 	}
 	
 	void multBy (ComplexNumber c) {
@@ -41,7 +37,6 @@ public class ComplexNumber {
 		real = (real * c.real) + (-1 * imaginary * c.imaginary);
 		
 		imaginary = (swap * c.imaginary) + (c.real * imaginary);
-		
 	}
 	
 	void squareThisCN() {
@@ -51,7 +46,6 @@ public class ComplexNumber {
 		real = (real * real) + (-1 * imaginary * imaginary);
 		
 		imaginary = 2 * swap * imaginary;
-		
 	}
 	
 	ComplexNumber add (ComplexNumber c) {
@@ -63,7 +57,6 @@ public class ComplexNumber {
 		myCN.imaginary = imaginary + c.imaginary;
 		
 		return myCN;
-	
 	}
 	
 	ComplexNumber sub (ComplexNumber c) {
@@ -75,7 +68,6 @@ public class ComplexNumber {
 		myCN.imaginary = imaginary - c.imaginary;
 		
 		return myCN;
-		
 	}
 	
 	ComplexNumber mult (ComplexNumber c) {
@@ -87,7 +79,6 @@ public class ComplexNumber {
 		myCN.imaginary = (real * c.imaginary) + (c.real * imaginary);
 		
 		return myCN;
-		
 	}
 	
 	ComplexNumber square() {
@@ -99,7 +90,6 @@ public class ComplexNumber {
 		myCN.imaginary = 2 * real * imaginary;
 		
 		return myCN;
-		
 	}
 	
 	boolean equals (ComplexNumber c) {
@@ -107,11 +97,10 @@ public class ComplexNumber {
 		if (real == c.real && imaginary == c.imaginary) {
 			
 			return true;
-			
 		}
-    
-		else return false;
-		
+		else {
+			return false;
+		}
 	}
 	
 	double modulus() {
@@ -121,7 +110,6 @@ public class ComplexNumber {
 		double modulus = Math.sqrt(x);
 		
 		return modulus;
-		
 	}
 	
 	double modSquare() {
@@ -129,15 +117,17 @@ public class ComplexNumber {
 		double x = Math.pow(real, 2) + Math.pow(imaginary, 2);
 
 		return x;
-
 	}
 	
 	void display() {
 
-		if (imaginary > 0) System.out.println(real + " + " + imaginary + "i");
-		
-		else System.out.println(real + " - " + Math.abs(imaginary) + "i");
-	
+		if (imaginary > 0) {
+			
+			System.out.println(real + " + " + imaginary + "i");
+		}
+		else {
+			System.out.println(real + " - " + Math.abs(imaginary) + "i");
+		}
 	}
 	
 }
